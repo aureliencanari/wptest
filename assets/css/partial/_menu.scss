@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap');
+//je voulais test avec un import si ça faisait beaucoup changer les perf, faudra test avec et sans
+
+.header{
+
+  .wrapper{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1380px;
+    margin: 0 auto;
+  }
+
+  a.hdr-logo-link{
+    font-family: "Ceviche One", sans-serif;
+    text-decoration: none;
+    color: #00AF3F;
+    font-size: 72px;
+  }
+}
+
+#nav-main ul{
+  display: flex;
+  list-style-type:none;
+  padding-left: 0;
+
+  li {
+    padding : 20px;
+
+    ::marker {
+      display: none;
+    }
+
+    a{
+      color:#00AF3F;
+      text-decoration: none;
+
+      &:hover{
+        color: #af0070;
+      }
+    }
+  }
+}

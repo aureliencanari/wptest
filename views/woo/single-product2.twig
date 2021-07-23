@@ -1,0 +1,28 @@
+{% extends "base.twig" %}
+
+{% block content %}
+{#    {{ dump(product.gallery_image_ids) }}#}
+    <pre>
+        {{ product|print_r }}
+    </pre>
+    <h1>{{ post.post_title }}</h1>
+    <img src="{{ post.thumbnail.src('shop_single') }}" />
+
+    <p>€ {{ post._price }}</p>
+    <p>Stock status : {{ post._stock_status }}</p>
+    <p>Description : {{ post.post_content }}</p>
+    <p>Descritpion courte : {{ post.post_excerpt }}</p>
+
+
+    <a href="?add-to-cart=50" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="{{ post.id }}" data-product_sku="987654321" aria-label="Ajouter “Chaussettes renard” à votre panier" rel="nofollow">Ajouter au panier</a>
+
+{#    {% for id in product.gallery_image_ids %}#}
+{#        <img src="{{ Image(id).src }}" />#}
+{#    {% endfor %}#}
+
+        
+    </article>
+
+{% endblock  %}
+
+
